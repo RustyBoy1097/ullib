@@ -487,7 +487,8 @@ _READ_ERROR:
 	inline void reset()
 	{
 		if( !( m_bucket&&m_first_block ) ){
-			return -1;
+			// return -1; todo fixme
+			return;
 		}
 #ifdef HASH_MONITOR_X
 		used_bucket = 0;

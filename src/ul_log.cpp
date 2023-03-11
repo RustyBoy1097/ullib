@@ -122,7 +122,7 @@ static FILE *ul_open_file(const char *name, char *mode)
 #if __GNUC__ == 4 && __GNUC_MINOR__ >= 6
 	path_end = strrchr((char *)name, '/');
 #else
-	path_end = strrchr(name, '/');
+	path_end = strrchr((char *)name, '/');
 #endif
 	if (path_end != NULL) {
 		path_len = (path_end>name+MAX_FILENAME_LEN) ? MAX_FILENAME_LEN : (size_t)(path_end-name);

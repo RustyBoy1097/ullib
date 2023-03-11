@@ -1422,7 +1422,7 @@ int ul_fetch_trunk(const char* site,char *trunk,int size) {
 #if __GNUC__ == 4 && __GNUC_MINOR__ >= 6
     ptail=strrchr((char *)site,'.');
 #else
-    ptail=strrchr(site,'.');
+    ptail=strrchr((char *)site,'.');
 #endif
     if(ptail == NULL) {
         return -3;
@@ -1468,7 +1468,7 @@ const char*  ul_fetch_maindomain(const char* site,char *domain,int size) {
 #if __GNUC__ == 4 && __GNUC_MINOR__ >= 6
     ptail=strrchr((char *)site,'.');
 #else
-    ptail=strrchr(site,'.');
+    ptail=strrchr((char *)site,'.');
 #endif
     if(ptail == NULL) {
         goto end;

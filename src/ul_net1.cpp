@@ -10,6 +10,12 @@
 #include "ul_conf.h"
 #include "ul_string.h"
 
+#ifndef UIO_MAXIOV
+// #include <linux/compiler.h>
+// #include <linux/types.h>
+#define UIO_MAXIOV   1024
+#endif
+
 char ul_ipaccess_grant[IPACCESS_GRANT_LEN + 1] = "";
 //***************************************************************
 // Note: keep the number of globle variables as few as possible

@@ -929,7 +929,7 @@ int ul_normalize_site_ip(const char* site,
 #if __GNUC__ == 4 && __GNUC_MINOR__ >= 6
       char* p = strchr((char *)site, '.');
 #else
-      char* p = strchr(site, '.');
+      char* p = strchr((char *)site, '.');
 #endif
       int val = 0;
       if(!p) { // last part.
